@@ -9,9 +9,7 @@ import { WorkersModule } from './workers/workers.module';
 
 @Module({
   imports: [
-    ServeStaticModule.forRoot({
-      rootPath: resolve(__dirname, 'static'),
-    }),
+    ServeStaticModule.forRoot({ rootPath: resolve(__dirname, 'static') }),
     ConfigModule.forRoot({ envFilePath: '.env', isGlobal: true }),
     MongooseModule.forRoot(process.env.MONGO_URI),
     AdminModule,
