@@ -7,7 +7,6 @@ import {
   Param,
   Delete,
   UseGuards,
-  Query,
 } from '@nestjs/common';
 import { DrugsService } from './drugs.service';
 import { CreateDrugsDto } from './dto/create-drugs.dto';
@@ -33,8 +32,8 @@ export class DrugsController {
   @HttpCode(200)
   @ApiOperation({ summary: 'Find all drugs' })
   @Get()
-  findAll(@Query() query: any) {
-    return this.drugsService.findAll(query);
+  findAll() {
+    return this.drugsService.findAll();
   }
 
   //  @UseGuards(JwtAuthGuard)

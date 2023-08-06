@@ -6,7 +6,6 @@ import {
   Put,
   Param,
   Delete,
-  UseGuards,
   Query,
 } from '@nestjs/common';
 import { WorkersService } from './workers.service';
@@ -33,8 +32,8 @@ export class WorkersController {
   @HttpCode(200)
   @ApiOperation({ summary: 'Find all workers' })
   @Get()
-  findAll(@Query() query: any) {
-    return this.workersService.findAll(query);
+  findAll() {
+    return this.workersService.findAll();
   }
 
   //  @UseGuards(JwtAuthGuard)

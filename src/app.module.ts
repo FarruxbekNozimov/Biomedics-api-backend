@@ -3,6 +3,8 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { ConfigModule } from '@nestjs/config';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { resolve } from 'path';
+
+// MODULES
 import { AdminModule } from './admin/admin.module';
 import { DrugsModule } from './drugs/drugs.module';
 import { WorkersModule } from './workers/workers.module';

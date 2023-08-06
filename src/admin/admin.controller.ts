@@ -7,7 +7,6 @@ import {
   Param,
   Delete,
   UseGuards,
-  Query,
 } from '@nestjs/common';
 import { AdminService } from './admin.service';
 import { CreateAdminDto } from './dto/create-admin.dto';
@@ -33,8 +32,8 @@ export class AdminController {
   @HttpCode(200)
   @ApiOperation({ summary: 'Find all admin' })
   @Get()
-  findAll(@Query() query: any) {
-    return this.adminService.findAll(query);
+  findAll() {
+    return this.adminService.findAll();
   }
 
   //  @UseGuards(JwtAuthGuard)

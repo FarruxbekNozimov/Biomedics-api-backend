@@ -17,7 +17,7 @@ export class DrugsService {
     return res;
   }
 
-  async findAll(query: string) {
+  async findAll() {
     const res = await this.orderModel.find().exec();
     return res;
   }

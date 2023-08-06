@@ -11,7 +11,6 @@ const start = async () => {
     app.enableCors();
     app.setGlobalPrefix('api');
     app.useGlobalPipes(new ValidationPipe());
-
     app.use(cookieParser());
 
     const config = new DocumentBuilder()
